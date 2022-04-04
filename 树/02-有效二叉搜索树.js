@@ -10,7 +10,7 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isValidBST = function(root) {
+let isValidBST = function(root) {
     return isValidBST(root,-Infinity,Infinity)
     function isValidBST(root,short,long) {
         if(root===null) return true
