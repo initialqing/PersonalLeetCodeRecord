@@ -17,6 +17,7 @@ MinStack.prototype.push = function(val) {
         if (val<min){
             this.minVal = val
         }
+        this.stack.push(val)
     }
 };
 
@@ -45,11 +46,8 @@ MinStack.prototype.top = function() {
 MinStack.prototype.getMin = function() {
         return this.minVal
 };
-/**
- * Your MinStack object will be instantiated and called as such:
- * var obj = new MinStack()
- * obj.push(val)
- * obj.pop()
- * var param_3 = obj.top()
- * var param_4 = obj.getMin()
- */
+let minStack = new MinStack();
+minStack.push(-2)
+minStack.push(0)
+minStack.push(-3)
+console.log(minStack)
