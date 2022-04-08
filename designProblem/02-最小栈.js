@@ -24,7 +24,11 @@ MinStack.prototype.push = function(val) {
  * @return {void}
  */
 MinStack.prototype.pop = function() {
-    this.stack.pop()
+    let temp = this.stack.pop()
+    let arr = [...this.stack]
+    if (temp===this.minVal) {
+        this.minVal = Math.min(...arr)
+    }
 };
 
 /**
