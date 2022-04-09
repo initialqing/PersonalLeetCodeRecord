@@ -10,20 +10,6 @@
  * @param {Node|null} root
  * @return {number[][]}
  */
-var levelOrder = function(root) {
-
-};/**
- * // Definition for a Node.
- * function Node(val,children) {
- *    this.val = val;
- *    this.children = children;
- * };
- */
-
-/**
- * @param {Node|null} root
- * @return {number[][]}
- */
 const levelOrder = function(root) {
         let res = []
         let queue = []
