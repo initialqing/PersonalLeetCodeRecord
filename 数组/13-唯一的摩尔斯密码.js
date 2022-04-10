@@ -1,19 +1,19 @@
-// /**
-//  * @param {string[]} words
-//  * @return {number}
-//  */
-// const uniqueMorseRepresentations = function(words) {
-//     let arr = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
-//     let res = new Set()
-//     for (let i = 0; i < words.length; i++) {
-//             let code = ''
-//         for (const word of words[i]) {
-//             code += arr[word.charCodeAt()-'a'.charCodeAt()]
-//         }
-//         res.add(code)
-//     }
-//    return  res.size
-// };
+/**
+ * @param {string[]} words
+ * @return {number}
+ */
+const uniqueMorseRepresentations = function(words) {
+    let arr = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+    let res = new Set()
+    for (let i = 0; i < words.length; i++) {
+            let code = ''
+        for (const word of words[i]) {
+            code += arr[word.charCodeAt()-'a'.charCodeAt()]
+        }
+        res.add(code)
+    }
+   return  res.size
+};
 /**
  * 思路不错的题解
  */
