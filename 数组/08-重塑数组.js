@@ -16,6 +16,7 @@ function reShape(mat,r,c) {
     // return  ans
     let arr = mat.flat()
     for (let i = 0; i < r; i++) {
+        // arr.splice(0,c)为从0开始删除到c位置 并返回删除的数组
         ans.push(arr.splice(0,c))
     }
     return  ans
