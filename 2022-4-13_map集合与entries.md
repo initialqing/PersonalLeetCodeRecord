@@ -25,6 +25,7 @@ console.log(newMap)
 ```
 > Array.from()方法可以将可迭代对象或者类数组对象转为一个真实的数组
 ```javascript
+// 可迭代对象的遍历
 for (const [key, value] of en) {
     // 相当于解构赋值得到键值对
     // 也可以写成一个变量得到键值对数组
