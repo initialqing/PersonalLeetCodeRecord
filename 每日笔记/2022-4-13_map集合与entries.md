@@ -1,4 +1,4 @@
-#### map集合转 obj
+> map集合转 obj
 ```javascript
 // 先创建一个map集合
 let m = new Map()
@@ -12,7 +12,7 @@ let iterators = m.entries()
 // 可以通过Object的内置函数fromEntries对map转换
 const object = Object.fromEntries(iterators)
 ```
-#### obj转为map集合（map集合的第二种创建方法）
+> obj转为map集合（map集合的第二种创建方法）
 ```javascript
 // 传入一个entries生成map集合
 let obj = {
