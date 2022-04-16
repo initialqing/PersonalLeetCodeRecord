@@ -31,7 +31,7 @@
 //     return maxSum
 // }
 // console.log(tanxin([-1,-1,-2,-2]))
-// 动态规划
+// dp
 // function dongtaiguihua(nums) {
 //     let pre = 0
 //     let maxSum = nums[0]

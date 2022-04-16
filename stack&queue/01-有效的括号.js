@@ -19,25 +19,29 @@ const isValid = function (s) {
         }
     }
     return stack.length === 0
-    /**
-     * 栈的另一种写法
-     */
+
+};
+/**
+ * 栈的另一种写法
+ */
     //let stack = []
-    let obj = {
-        '{':'}',
-        '[':']',
-        '(':')'
-    }
-    for(let i = 0;i<s.length;i++){
-        if(s[i]==='{'||s[i]==='('||s[i]==='['){
-            stack.push(s[i])
-        }else {
-            let pop = stack.pop()
-            if(obj[pop]!==s[i]) {
-                return false
+const method = (s) => {
+        let obj = {
+            '{':'}',
+            '[':']',
+            '(':')'
+        }
+        let stack = []
+        for(let i = 0;i<s.length;i++){
+            if(s[i]==='{'||s[i]==='('||s[i]==='['){
+                stack.push(s[i])
+            }else {
+                let pop = stack.pop()
+                if(obj[pop]!==s[i]) {
+                    return false
+                }
             }
         }
-    }
-    return stack.length===0
-};
-console.log(isValid("()[]{}"))
+        return stack.length===0
+}
+
