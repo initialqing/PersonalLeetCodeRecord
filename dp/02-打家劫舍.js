@@ -8,7 +8,7 @@
 // }
 // let nums = [1,4,3,1,5,3]
 // console.log(dajie(nums))
-/**动态规划
+/**dp
  * @param {number[]} nums
  * @return {number}
  */
