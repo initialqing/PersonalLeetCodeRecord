@@ -5,7 +5,6 @@
  */
 const mostCommonWord = function(paragraph, banned) {
     const map = new Map();
-
     const paragraphArr = paragraph.toLowerCase().replace(/[!?',;.]/g, ' ').split(' ');
     for(let item of paragraphArr){
         if(item !== '' && !banned.includes(item)){
