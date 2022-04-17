@@ -23,11 +23,14 @@ let obj = {
 let newMap = new Map(Object.entries(obj))
 console.log(newMap)
 ```
-> Array.from()方法可以将可迭代对象或者类数组对象转为一个真实的数组
+> Array.from()方法可以将可迭代对象或者类数组对象转为一个真实的数组 比如Map.entries()  或者直接用扩展表达式[...map]
 ```javascript
 // 可迭代对象的遍历
+// en = [[],[],[],[]]
 for (const [key, value] of en) {
-    // 相当于解构赋值得到键值对
-    // 也可以写成一个变量得到键值对数组
+    //直接解构赋值
+}
+for (const ele of en) {
+    //写成一个变量
 }
 ```
