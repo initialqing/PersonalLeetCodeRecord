@@ -6,8 +6,7 @@
 const threeSum = function(nums) {
     if(nums.length<3) return []
     let n = nums.length
-    let a = n>256 ? 256:n
-    let resArr = new Array(a)
+    let resArr = []
     nums.sort((a,b) => a-b)
     if(n<3 || nums[0]>0 || nums[n-1]<0) {
         return []
