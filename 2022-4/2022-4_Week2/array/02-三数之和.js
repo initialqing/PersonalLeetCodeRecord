@@ -19,8 +19,8 @@ const threeSum = function(nums) {
         if(nums[i]>0) {
             break
         }
-        j = i+1
-        k = n-1
+        let j = i+1
+        let k = n-1
         while(j<k) {
             let tar = nums[i] + nums[j] + nums[k]
             if(tar> 0) {
