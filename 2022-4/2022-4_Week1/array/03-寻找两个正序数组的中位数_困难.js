@@ -1,9 +1,14 @@
 /**
- * @param {number[]} nums1
- * @param {number[]} nums2
- * @return {number}
+ * 
+ * @param {number[]} nums1 
+ * @param {number} nums2 
+ * @returns {number}
  */
 const findMedianSortedArrays = function(nums1, nums2) {
+    /**
+     * 
+     * 
+     */
     if (!nums2.length&&!nums1.length) return 0
     let mergeArr = [...nums1,...nums2]
     mergeArr.sort((a,b) => {
