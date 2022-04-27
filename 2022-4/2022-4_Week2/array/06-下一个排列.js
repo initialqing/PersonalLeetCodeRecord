@@ -3,7 +3,7 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 const nextPermutation = function (nums) {
-    let tempIndex = 0
+    let tempIndex = -1
     let flag = false
     for (let index = nums.length-1; index >=1; index--) {
         if(nums[index]>nums[index-1]) {
