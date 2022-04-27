@@ -2,7 +2,7 @@
  * @param {number[][]} grid
  * @return {number}
  */
-const projectionArea = function(grid) {
+const projectionArea = function (grid) {
     let n = grid.length
     //z方向的面积就是不为0的元素的个数，需要统计二维数组中不为0的元素个数
     let count = 0
@@ -15,13 +15,13 @@ const projectionArea = function(grid) {
     }
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < grid[i].length; j++) {
-            temp = Math.max(grid[j][i],temp)
-            if(grid[i][j]!==0) {
+            temp = Math.max(grid[j][i], temp)
+            if (grid[i][j] !== 0) {
                 count++
             }
         }
-        xArea+=temp
+        xArea += temp
         temp = 0
     }
-    return count+yArea+xArea
+    return count + yArea + xArea
 };

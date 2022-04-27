@@ -11,9 +11,9 @@ const generateParenthesis = function (n) {
         // 遍历set
         for (const s of set) {
             // console.log(s)
-            for (let j = 0; j <s.length; j++) {
+            for (let j = 0; j < s.length; j++) {
                 // 将括号插入到任意的位置
-                nextSet.add(s.slice(0,j)+'()'+s.slice(j))
+                nextSet.add(s.slice(0, j) + '()' + s.slice(j))
             }
         }
         set = nextSet
