@@ -1,8 +1,3 @@
-/**
- * @param {string} s
- * @param {character} c
- * @return {number[]}
- */
 const shortestToChar = function (s, c) {
     // 存放结果
     let res = []
