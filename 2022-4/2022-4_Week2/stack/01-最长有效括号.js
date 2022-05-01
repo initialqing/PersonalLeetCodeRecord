@@ -1,8 +1,10 @@
 /**
+ *
+ *这个题目还没有做完_2022-4-28
  * @param {string} s
  * @return {number}
  */
-var longestValidParentheses = function(s) {
+const longestValidParentheses = function(s) {
     let stack = []
     let count = 0
     for(const sele of s){
