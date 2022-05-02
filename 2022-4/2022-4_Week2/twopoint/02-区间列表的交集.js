@@ -23,7 +23,6 @@ var intervalIntersection = function(firstList, secondList) {
     }
     return res
 };
-let test1 =
-    [[0,2],[5,10],[13,23],[24,25]]
-        let test2 = [[1,5],[8,12],[15,24]]
+let test1 = [[0,2],[5,10],[13,23],[24,25]]
+let test2 = [[1,5],[8,12],[15,24]]
 intervalIntersection(test1,test2)
