@@ -1,40 +1,40 @@
-// /**
-//  * @param {string} s
-//  * @param {string} p
-//  * @return {number[]}
-//  */
-// const findAnagrams = function(s, p) {
-//     let res = []
-//     let n = p.length
-//     let pCount = new Array(26).fill(0)
-//     for(let i = 0;i<p.length;i++) {
-//         let s = p[i].charCodeAt()-'a'.charCodeAt()
-//         pCount[s]++
-//     }
-//     const judge = (temp) => {
-//         let tempCount = new Array(26).fill(0)
-//         for(let j = 0;j<temp.length;j++) {
-//             let s = temp[j].charCodeAt()-'a'.charCodeAt()
-//             tempCount[s]++
-//         }
-//         console.log(tempCount)
-//         for(let k = 0;k<26;k++) {
-//             if(pCount[k]!== tempCount[k]) {
-//                 return false
-//             }
-//         }
-//         return true
-//     }
-//
-//     for(let i = 0;i<s.length;i++) {
-//         let right = i + n
-//         let temp = s.slice(i,right)
-//         if(judge(temp)) {
-//             res.push(i)
-//         }
-//     }
-//     return res
-// };
+/**
+ * @param {string} s
+ * @param {string} p
+ * @return {number[]}
+ */
+const findAnagrams = function(s, p) {
+    let res = []
+    let n = p.length
+    let pCount = new Array(26).fill(0)
+    for(let i = 0;i<p.length;i++) {
+        let s = p[i].charCodeAt()-'a'.charCodeAt()
+        pCount[s]++
+    }
+    const judge = (temp) => {
+        let tempCount = new Array(26).fill(0)
+        for(let j = 0;j<temp.length;j++) {
+            let s = temp[j].charCodeAt()-'a'.charCodeAt()
+            tempCount[s]++
+        }
+        console.log(tempCount)
+        for(let k = 0;k<26;k++) {
+            if(pCount[k]!== tempCount[k]) {
+                return false
+            }
+        }
+        return true
+    }
+
+    for(let i = 0;i<s.length;i++) {
+        let right = i + n
+        let temp = s.slice(i,right)
+        if(judge(temp)) {
+            res.push(i)
+        }
+    }
+    return res
+};
 /**
  * @param {string} s
  * @param {string} p
