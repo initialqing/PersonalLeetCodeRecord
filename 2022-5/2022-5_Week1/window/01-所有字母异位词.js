@@ -53,6 +53,7 @@ const findAnagrams = function(s, p) {
     // validSize的大小等于不同字符的个数
     let validSize  = Object.keys(need).length
     while(right < s.length) {
+        //
         // 得到当前遍历的字符的值
         const char = s[right]
         // 窗口向后移动
