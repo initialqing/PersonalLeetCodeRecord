@@ -21,22 +21,23 @@ const numSubarrayProductLessThanK = function (nums, k) {
     //     }
     // }
     // return count
-    if (k<=1) return  0
-    let left = 0,right = 0
-    let mul = 1,res = 0
-    while (right<nums.length) {
+    if (k <= 1) return 0
+    let left = 0, right = 0
+    let mul = 1, res = 0
+    while (right < nums.length) {
         mul *= nums[right]
-        while (mul>=k) {
-            mul/=nums[left]
+        while (mul >= k) {
+            mul /= nums[left]
             left++
         }
-        res += right-left+1
+        // 结果与窗口左右边界的联系
+        res += right - left + 1
         right++
     }
-    return  res
+    return res
 };
 1
-1+2
-+2
-+3
-numSubarrayProductLessThanK([10,5,2,6],100)
+1 + 2
++ 2
++ 3
+numSubarrayProductLessThanK([10, 5, 2, 6], 100)
