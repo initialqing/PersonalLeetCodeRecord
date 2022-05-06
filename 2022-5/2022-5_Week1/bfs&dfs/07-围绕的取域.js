@@ -52,3 +52,66 @@ var solve = function(board) {
     }
     return board
 };
+/**
+ * @param
+ * @return {void} Do not return anything, modify board in-place instead.
+ */
+var solve = function (board) {
+    let visit = [], row = board.length, column = board[0].length, biaoji = []
+    let directions = [[0, 1], [0, -1], [1, 0], [-1, 0]]
+    let visited = new Array(row).fill(0).map(() => new Array(column).fill(0))
+    let queue = []
+    const bfs = (i, j) => {
+        queue.push([i, j])
+        while (queue.length) {
+            let length = queue.length
+            for (let i = 0; i < length; i++) {
+                let [x, y] = queue.shift()
+                for (const [i, j] of directions) {
+                    let x1 = x + i
+                    let y1 = y + j
+                    if (x1 >= 0 && x1 < row && y1 >= 0 && y1 < column && board[x1][y1] === 'O' && visited[x1][y1] !== 1) {
+                        console.log(x1, y1)
+
+                        visited[x1][y1] = 1
+                        queue.push([x1, y1])
+                    }
+                }
+
+            }
+        }
+
+    }
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < column; j++) {
+            if (i === 0 && board[i][j] === 'O') {
+                visited[i][j] = 1
+                bfs(i, j)
+            }
+            if (i === row - 1 && board[i][j] === 'O') {
+                console.log(i, j)
+
+                visited[i][j] = 1
+                bfs(i, j)
+            }
+            if (j === 0 && board[i][j] === 'O') {
+                visited[i][j] = 1
+                bfs(i, j)
+            }
+            if (j === column - 1 && board[i][j] === 'O') {
+                visited[i][j] = 1
+                bfs(i, j)
+            }
+        }
+    }
+
+
+    for (let i = 0; i < row; i++) {
+        for (let j = 0; j < column; j++) {
+            if (visited[i][j] !== 1 && board[i][j] === 'O') {
+                board[i][j] = 'X'
+            }
+        }
+    }
+    return board
+};

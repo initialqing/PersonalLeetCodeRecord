@@ -29,16 +29,16 @@ const shortestPathBinaryMatrix = function (grid) {
                 let y1 = y + j
 
                 // 边界条件
-                if (x1 < length && x1>=0  && visited[x1][y1] === 0 && y1 < length && y1 >= 0  && grid[x1][y1] === 0) {
+                if (x1 < length && x1 >= 0 && visited[x1][y1] === 0 && y1 < length && y1 >= 0 && grid[x1][y1] === 0) {
                     if (x1 === length - 1 && y1 === length - 1) {
                         return res + 1
                     }
-                    queue.push([x1,y1])
+                    queue.push([x1, y1])
                     visited[x1][y1] = 1
                 }
             }
         }
-        res+=1
+        res += 1
     }
     return -1
 };
