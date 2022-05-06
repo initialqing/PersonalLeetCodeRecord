@@ -115,3 +115,58 @@ var solve = function (board) {
     }
     return board
 };
+/**
+ * @param {character[][]} board
+ * @return {void} Do not return anything, modify board in-place instead.
+ */
+var solve1 = function(board) {
+    const dir = [
+        [1,0],
+        [-1,0],
+        [0,1],
+        [0,-1]
+    ]
+    const m = board.length,n = board[0].length
+    let visit = new Array(m).fill(0).map( () => new Array(n).fill(0))
+    const dfs = (board,x,y) => {
+        if(visit[x][y]) return
+        visit[x][y] = 1
+        for(const [i,j] of dir) {
+            let x1 = x + i
+            let y1 = y + j
+            if(x1 < 0 || y1 < 0 || x1 >= m || y1 >= n ) {
+                continue
+            }
+            if(board[x1][y1]==='O' && visit[x1][y1]===0) {
+                visit[x1][y1] = 1
+                dfs(board,x1,y1)
+            }
+        }
+    }
+    for(let i = 0;i<board.length;++i) {
+        if(board[i][0] === 'O') {
+            dfs(board,i,0)
+        }
+        if(board[i][n-1]==='O') {
+            dfs(board,i,n-1)
+        }
+    }
+    for(let j = 0;j<board[0].length;++j) {
+        if(board[0][j] === 'O') {
+            dfs(board,0,j)
+        }
+        if(board[m-1][j]==='O') {
+            dfs(board,m-1,j)
+        }
+    }
+    console.log(visit)
+    for(let i = 0;i<m;++i) {
+        for(let j = 0;j<n;++j) {
+            if(board[i][j]==='O' && !visit[i][j]) {
+                board[i][j] = 'X'
+            }
+        }
+    }
+    return board
+};
+solve1([["O","O","O"],["O","O","O"],["O","O","O"]])
