@@ -10,7 +10,6 @@ var convertBST = function(root) {
         node.val += pre
         pre = node.val
         helper(node.left)
-
     }
     helper(root)
     return root
