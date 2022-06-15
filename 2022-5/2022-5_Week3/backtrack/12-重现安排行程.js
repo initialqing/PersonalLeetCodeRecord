@@ -8,7 +8,7 @@ const findItinerary = function(tickets) {
         if (!map[from]) {
             map[from] = []
         }
-        map[from].push(to);
+        map[from].push(to)
     }
     // 按字母顺序排序
     for (const mapKey in map) {
