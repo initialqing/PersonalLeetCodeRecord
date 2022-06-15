@@ -3,6 +3,7 @@
  * @return {string[]}
  */
 const findItinerary = function(tickets) {
+    //master分支上就进行的改动
     let res = ['JFK'],map = {}
     for (const [from,to] of tickets) {
         if (!map[from]) {
