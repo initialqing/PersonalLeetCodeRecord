@@ -3,7 +3,7 @@
  * @return {string[]}
  */
 const findItinerary = function(tickets) {
-    let res = ['JFK'],map = {}
+    let res = ['JFK'],map = {};
     for (const [from,to] of tickets) {
         if (!map[from]) {
             map[from] = []
