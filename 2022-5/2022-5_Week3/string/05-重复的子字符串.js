@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 const repeatedSubstringPattern = function(s) {
-    // 核心思想， 得到next数组，假如next数组的最后一项不为0
+    // 核心思想， 得到next数组，假如next数组的最后一项不为0,且数组长度可以整除数组长度减去最长前后缀的长度
     // 数组长度减去最长相同前后缀的长度相当于是第一个周期的长度，也就是一个周期的长度
     // 如果这个周期可以被整除，就说明整个数组就是这个周期的循环，即有重复字符串
     let next = getNext(s)
