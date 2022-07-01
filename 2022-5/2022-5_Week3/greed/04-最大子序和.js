@@ -8,7 +8,7 @@ const maxSubArray = function(nums) {
         if(sum>0) {
             sum+=ele
         }else {
-            sum = ele
+            sum = ele;
         }
         sumMax = Math.max(sumMax,sum)
     }
