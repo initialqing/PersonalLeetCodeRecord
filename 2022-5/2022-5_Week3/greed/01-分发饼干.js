@@ -1,7 +1,6 @@
 /**
- * @param {number[]} g
- * @param {number[]} s
- * @return {number}
+ * @param {number[]} g.
+ *
  */
 var findContentChildren = function(childrens, cookies) {
     let count = 0;
