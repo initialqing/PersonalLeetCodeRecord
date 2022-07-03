@@ -16,7 +16,7 @@ var maxProfit = function(prices, fee) {
         }
         // 可以卖出股票
         if(prices[i]>minPrice+fee) {
-            res+= prices[i]-minPrice-fee
+            res+= prices[i]-minPrice-fee;
             // 相当于持有股票
             minPrice = prices[i] - fee
         }
