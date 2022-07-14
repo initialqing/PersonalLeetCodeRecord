@@ -7,15 +7,23 @@ const repeatedSubstringPattern = function(s) {
     // 数组长度减去最长相同前后缀的长度相当于是第一个周期的长度，也就是一个周期的长度
     // 如果这个周期可以被整除，就说明整个数组就是这个周期的循环，即有重复字符串
     let next = getNext(s)
-    console.log(2%2===0)
+    console.log(next)
     if(next[next.length-1]!==0 && s.length % (s.length-next[next.length-1]) ===0) {
         return true
     }else{
         return false
     }
 };
+/**
+ * 前缀是指不包含最后一个字符的所有以第一个字符开头的连续子串；
+ * 后缀是指不包含第一个字符的所有以最后一个字符结尾的连续子串
+ * next数组举例：'ABABA' 对应的next数组为 0 0 1 2 3   前缀以A开头的所有字符  后缀是以B结尾的所有字符   前缀：ABA  后缀：ABA 所以最长公共前后缀长度为3
+*              'ABABC' 对应的next数组为 0 0 1 2 0
+ * @param str
+ * @returns {number[]}
+ */
 const getNext =  (str) =>{
-    let next = [0],prefix_len = 0;i=1
+    let next = [0],prefix_len = 0,i=1
     while(i < str.length) {
         if(str[prefix_len]===str[i]) {
             prefix_len++
@@ -32,3 +40,4 @@ const getNext =  (str) =>{
     }
     return next
 }
+repeatedSubstringPattern('abacabab')

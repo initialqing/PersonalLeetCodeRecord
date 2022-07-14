@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var lengthOfLIS = function(nums) {
+const lengthOfLIS = function(nums) {
     let arr =new Array(nums.length).fill(1)
     let res = 1
     // let temp = nums[0]
