@@ -8,8 +8,7 @@ const lengthOfLIS = function(nums) {
     // let temp = nums[0]
     for(let i = 1;i<nums.length;i++) {
         for(let j = 0;j<i;j++) {
-            if(nums[i]>nums[j]){ arr[i] = Math.max(arr[i],arr[j]+1)
-            }
+            if(nums[i]>nums[j]){ arr[i] = Math.max(arr[i],arr[j]+1)}
         }
         res = Math.max(res, arr[i]);
     }
