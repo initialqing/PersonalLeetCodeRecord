@@ -13,7 +13,6 @@ const combinationSum4 = function(nums, target) {
                 dp[i] += dp[i-nums[j]]
             }
         }
-        console.log(dp)
     }
     return dp[target]
 };
