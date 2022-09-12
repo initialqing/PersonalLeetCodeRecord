@@ -14,10 +14,9 @@ const findAnagrams = function(s, p) {
     const judge = (temp) => {
         let tempCount = new Array(26).fill(0)
         for(let j = 0;j<temp.length;j++) {
-            let s = temp[j].charCodeAt()-'a'.charCodeAt()
+            let s = temp[j].charCodeAt()- 'a'.charCodeAt()
             tempCount[s]++
         }
-        console.log(tempCount)
         for(let k = 0;k<26;k++) {
             if(pCount[k]!== tempCount[k]) {
                 return false
