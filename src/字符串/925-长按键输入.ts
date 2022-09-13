@@ -28,7 +28,6 @@ function isLongPressedName(name: string, typed: string): boolean {
             }
         }
     }
-
     if (i < name.length) return false
     while (j < typed.length) {
         if(typed[j] === typed[j-1]) j++
