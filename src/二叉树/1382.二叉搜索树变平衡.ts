@@ -12,7 +12,7 @@
  * }
  */
 
- function balanceBST(root: TreeNode | null): TreeNode | null {
+function balanceBST(root: TreeNode | null): TreeNode | null {
     const tempArr: number[] = []
     // 将二叉搜索树转为有序数组
     const midOrder = (root: TreeNode | null) => {
@@ -38,4 +38,3 @@
     midOrder(root)
     return getTree(tempArr, 0, tempArr.length - 1)
 };
-

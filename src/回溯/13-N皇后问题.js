@@ -111,7 +111,6 @@ var solveNQueensOther = function(n) {
         }
     }
     let chessBoard = new Array(n).fill([]).map(() => new Array(n).fill('.'))
-    console.log(chessBoard)
     backtracing(0,chessBoard)
     return result
 };
