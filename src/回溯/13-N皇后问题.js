@@ -60,7 +60,7 @@ const solveNQueens = function(n) {
 /*
         另一个版本
  */
-var solveNQueens = function(n) {
+var solveNQueensOther = function(n) {
     function isValid(row, col, chessBoard, n) {
 
         for(let i = 0; i < row; i++) {
