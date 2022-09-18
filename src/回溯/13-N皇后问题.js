@@ -60,7 +60,7 @@ const solveNQueens = function(n) {
 /*
         另一个版本
  */
-var solveNQueens = function(n) {
+var solveNQueensOther = function(n) {
     function isValid(row, col, chessBoard, n) {
 
         for(let i = 0; i < row; i++) {
@@ -111,7 +111,6 @@ var solveNQueens = function(n) {
         }
     }
     let chessBoard = new Array(n).fill([]).map(() => new Array(n).fill('.'))
-    console.log(chessBoard)
     backtracing(0,chessBoard)
     return result
 };
