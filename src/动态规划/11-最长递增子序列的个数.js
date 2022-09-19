@@ -23,6 +23,7 @@ var findNumberOfLIS = function(nums) {
         } else if (dp[i] === maxLen) {
             ans += cnt[i];
         }
+        console.log(ans)
     }
     return ans;
 };
