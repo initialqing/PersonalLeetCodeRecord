@@ -17,6 +17,7 @@ const dailyTemperatures0 = function (temperatures) {
     }
     return ans
 };
+
 // 单调栈的解法
 const dailyTemperatures1 = function (temperatures) {
     // 结果数组

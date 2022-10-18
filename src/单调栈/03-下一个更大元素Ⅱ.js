@@ -14,7 +14,6 @@ const nextGreaterElements1 = function(nums) {
         if(nums[i] <= nums[top]) {
             stack.push(i)
         }else {
-            console.log(nums[stack[stack.length-1]], nums[i])
             while(stack.length && nums[i] > nums[stack[stack.length-1]]) {
                 const top = stack.pop()
                 ans[top] = nums[i]
@@ -25,6 +24,7 @@ const nextGreaterElements1 = function(nums) {
     ans.length = len
     return ans
 };
+
 /**
  * @param {number[]} nums
  * @return {number[]}
@@ -43,7 +43,6 @@ const nextGreaterElements2 = function(nums) {
         // 压入对应位置的索引
         stack.push(i % nums.length)
     }
-
     ans.length = len
     return ans
 };
