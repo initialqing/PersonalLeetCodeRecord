@@ -1,4 +1,4 @@
-function countDigitOne(n:number) {
+function countDigitOne(n) {
     let count = 0
     let rem = 0
     for(let i = 0;n !==0;i++) {
