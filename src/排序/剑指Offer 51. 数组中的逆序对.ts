@@ -11,6 +11,7 @@ function reversePairs(nums: number[]): number {
 
         let left = 0, right = 0, cur = 0
         let temp = new Array(end - front + 1).fill(0)
+        
         while (left < leftArr.length && right < rightArr.length) {
             if (leftArr[left] <= rightArr[right]) {
                 temp[cur++] = leftArr[left++]
@@ -19,6 +20,7 @@ function reversePairs(nums: number[]): number {
                 count += leftArr.length - left
             }
         }
+
         while (left < leftArr.length) {
             temp[cur++] = leftArr[left++]
         }

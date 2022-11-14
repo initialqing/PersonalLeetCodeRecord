@@ -55,6 +55,7 @@ class UnionFind {
     constructor(size: number) {
         this.parents = Array(size).fill(0).map((_, index) => index)
     }
+    // 彻底压缩
     find(index: number) {
         if (this.parents[index] !== index) {
             this.parents[index] = this.find(this.parents[index])
