@@ -37,7 +37,7 @@ const trap = function(height) {
     // 存放每个柱子右侧雨水的最大值
     maxheightR = new Array(height.length).fill(0)
     // 初始化
-    maxheightL[0] = height[0]
+    maxheightL[0] = height[0];
     for(let i = 1;i<height.length;i++) {
         // 递推公式
         maxheightL[i] = Math.max(maxheightL[i-1],height[i])

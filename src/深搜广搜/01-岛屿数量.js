@@ -26,3 +26,25 @@ var numIslands = function(grid) {
     }
     return count
 };
+var numIslands = function(grid) {
+    let res = 0,queue = [],
+    directions = [[0,1],[0,-1],[1,0],[-1,0]]
+    for(let i = 0;i<grid.length;i++) {
+        for(let j = 0;j<grid[0].length;j++) {
+            if(grid[i][j] === '1') {
+                res++
+                queue.push([i,j])
+                while(queue.length) {
+                    let [x,y] = queue.shift()
+                    for(const [x1,y1] of directions) {
+                        let x2 = x+x1,y2 = y+y1
+                        if(x2>=0&&x2<grid.length&&y2>=0&&y2<grid[0].length&&grid[x2][y2]==='1') {
+                            queue.push([x2,y2])
+                            grid[x2][y2] = '0'
+                        }
+                    }
+                }
+            }
+        }
+    }
+};

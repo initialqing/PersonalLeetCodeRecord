@@ -1,4 +1,4 @@
-/**
+/**无重复
  * @param {string} s
  * @return {number}
  * 解法1：采用队列的方法动态删除
